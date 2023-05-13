@@ -20,6 +20,8 @@
 				 <br /> 
 				 <a href="addNewCoin.html"><button class="button two">Add a new coin</button></a>
 				 <br /> 
+				 <a href="deleteCoin.html"><button class="button three">Delete a coin</button></a>
+				 <br /> 
 			</div>
 </div>
 </body>

@@ -30,7 +30,7 @@
 		</c:when>
 		
 		<c:otherwise>
-			<p>No coins found</p>
+			
 		</c:otherwise>
 	</c:choose>
 </div>
