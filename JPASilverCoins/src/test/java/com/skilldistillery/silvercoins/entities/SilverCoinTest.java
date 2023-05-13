@@ -32,7 +32,7 @@ class SilverCoinTest {
 	@BeforeEach
 	void setUp() throws Exception {
 		em = emf.createEntityManager();
-		silverCoin = em.find(SilverCoin.class, 1);
+		silverCoin = em.find(SilverCoin.class, 2);
 		}
 
 	@AfterEach
@@ -44,7 +44,12 @@ class SilverCoinTest {
 	@Test
 	void test() {
 		assertNotNull(silverCoin);
-		assertEquals("quarter", silverCoin.getType());
+		assertEquals("Peace Dollar", silverCoin.getType());
+//		assertEquals("Philadelphia", silverCoin.getMint());
+//		assertEquals("1964", silverCoin.getDate());
+//		assertEquals(10.16, silverCoin.getValue());
+//		assertEquals(11.25, silverCoin.getSilverContent());
+//		assertEquals(12.5, silverCoin.getWeight());
 	}
 
 }

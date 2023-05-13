@@ -13,13 +13,13 @@ import com.skilldistillery.silvercoins.entities.SilverCoin;
 @Service
 @Transactional
 public class SilverCoinDAOImpl implements SilverCoinsDAO {
-	
+
 	@PersistenceContext
 	private EntityManager em;
 
 	@Override
 	public SilverCoin findById(int id) {
-		
+
 		return em.find(SilverCoin.class, id);
 	}
 
@@ -43,8 +43,15 @@ public class SilverCoinDAOImpl implements SilverCoinsDAO {
 
 	@Override
 	public boolean deleteById(int id) {
-		// TODO Auto-generated method stub
-		return false;
+		try {
+			SilverCoin silverCoin = em.find(SilverCoin.class, id);
+			em.remove(silverCoin);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+
 	}
 
 	@Override
