@@ -10,7 +10,6 @@
 
 <div class="container">
 
-Test
 <c:choose>
 		<c:when test="${! empty silverCoin}">
 			
@@ -35,7 +34,7 @@ Test
 		</c:otherwise>
 	</c:choose>
 </div>
- <a href="home.jsp" class="btn btn-secondary" role="button">Back to Home</a>
+ <a href="home.do" class="btn btn-secondary" role="button">Back to Home</a>
 
 </body>
 </html>
