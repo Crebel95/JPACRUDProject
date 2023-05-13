@@ -77,14 +77,14 @@ public class SilverCoin {
 	}
 
 
-	@Transient
-	public Year getDate() {
-		return Year.of(date);
-	}
-
-	public void setDate(Year date) {
-		this.date = date.getValue();
-	}
+//	@Transient
+//	public Year getDate() {
+//		return Year.of(date);
+//	}
+//
+//	public void setDate(Year date) {
+//		this.date = date.getValue();
+//	}
 
 	public Double getValue() {
 		return value;
@@ -110,11 +110,25 @@ public class SilverCoin {
 		this.weight = weight;
 	}
 
-//	@Override
-//	public String toString() {
-//		return "SilverCoin [id=" + id + ", type=" + type + ", mint=" + mint + ", date=" + date + ", value=" + value
-//				+ ", silverContent=" + silverContent + ", weight=" + weight + "]";
-//	}
+	@Override
+	public String toString() {
+		return "SilverCoin [id=" + id + ", type=" + type + ", mint=" + mint + ", date=" + date + ", value=" + value
+				+ ", silverContent=" + silverContent + ", weight=" + weight + "]";
+	}
+	
+	public int getDate() {
+		return date;
+	}
+
+
+	public void setDate(int date) {
+		this.date = date;
+	}
+
+
+	
+		
+		
 
 
 

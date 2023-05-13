@@ -25,6 +25,11 @@
 
 	</div>
 	<div>
+	<form action="updatedFilms.do" method="GET">		
+				  <input type="hidden" value="${film.id}" name="id" />
+				  <input type="submit" value="${film.id}" />
+			</form>
+			<br>
 		<a href="home.do" class="btn btn-secondary" role="button">Home</a>
 	</div>
 

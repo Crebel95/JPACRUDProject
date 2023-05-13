@@ -22,7 +22,6 @@ public class SilverCoinDAOImpl implements SilverCoinsDAO {
 
 	@Override
 	public SilverCoin findById(int id) {
-
 		return em.find(SilverCoin.class, id);
 	}
 
@@ -34,16 +33,23 @@ public class SilverCoinDAOImpl implements SilverCoinsDAO {
 
 	@Override
 	public SilverCoin create(SilverCoin silverCoin) {
-	 
 		em.persist(silverCoin);
-		
 		return silverCoin;
 	}
 
 	@Override
 	public SilverCoin update(int id, SilverCoin silverCoin) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		SilverCoin sc = em.find(SilverCoin.class, id);
+		
+		sc.setType(silverCoin.getType());
+		sc.setMint(silverCoin.getMint());
+		sc.setDate(silverCoin.getDate());
+		sc.setValue(silverCoin.getValue());
+		sc.setSilverContent(silverCoin.getSilverContent());
+		sc.setWeight(silverCoin.getWeight());
+		
+		return silverCoin;
 	}
 
 	@Override
@@ -57,12 +63,6 @@ public class SilverCoinDAOImpl implements SilverCoinsDAO {
 			return false;
 		}
 
-	}
-
-	@Override
-	public SilverCoinsDAO findByIdint(int id) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

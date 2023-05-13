@@ -22,6 +22,7 @@
 				 <br /> 
 				 <a href="deleteCoin.html"><button class="button three">Delete a coin</button></a>
 				 <br /> 
+				 
 			</div>
 </div>
 </body>
