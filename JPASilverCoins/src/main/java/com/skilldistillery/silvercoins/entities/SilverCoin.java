@@ -1,6 +1,7 @@
 package com.skilldistillery.silvercoins.entities;
 
 import java.time.Year;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,7 +23,7 @@ public class SilverCoin {
 
 	private String mint;
 	
-	private Year date;
+	private Date date;
 	
 	private Double value;
 	
@@ -36,16 +37,16 @@ public class SilverCoin {
 		super();
 	}
 
-	public SilverCoin(int id, String type, String mint, Year date, Double value, Double silverContent, Double weight) {
-		super();
-		this.id = id;
-		this.type = type;
-		this.mint = mint;
-		this.date = date;
-		this.value = value;
-		this.silverContent = silverContent;
-		this.weight = weight;
-	}
+//	public SilverCoin(int id, String type, String mint, Year date, Double value, Double silverContent, Double weight) {
+//		super();
+//		this.id = id;
+//		this.type = type;
+//		this.mint = mint;
+//		this.date = date;
+//		this.value = value;
+//		this.silverContent = silverContent;
+//		this.weight = weight;
+//	}
 
 	public int getId() {
 		return id;
@@ -71,11 +72,11 @@ public class SilverCoin {
 		this.mint = mint;
 	}
 
-	public Year getDate() {
+	public Date getDate() {
 		return date;
 	}
 
-	public void setDate(Year date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 
@@ -103,11 +104,11 @@ public class SilverCoin {
 		this.weight = weight;
 	}
 
-	@Override
-	public String toString() {
-		return "SilverCoin [id=" + id + ", type=" + type + ", mint=" + mint + ", date=" + date + ", value=" + value
-				+ ", silverContent=" + silverContent + ", weight=" + weight + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "SilverCoin [id=" + id + ", type=" + type + ", mint=" + mint + ", date=" + date + ", value=" + value
+//				+ ", silverContent=" + silverContent + ", weight=" + weight + "]";
+//	}
 
 
 

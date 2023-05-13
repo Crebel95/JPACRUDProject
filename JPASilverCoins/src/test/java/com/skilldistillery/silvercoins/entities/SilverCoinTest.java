@@ -43,8 +43,10 @@ class SilverCoinTest {
 
 	@Test
 	void test() {
-		assertNotNull(silverCoin);
+//		assertNotNull(silverCoin);
+		System.out.println(em.find(SilverCoin.class, 2));
 		assertEquals("Peace Dollar", silverCoin.getType());
+		System.out.println(silverCoin);
 //		assertEquals("Philadelphia", silverCoin.getMint());
 //		assertEquals("1964", silverCoin.getDate());
 //		assertEquals(10.16, silverCoin.getValue());
