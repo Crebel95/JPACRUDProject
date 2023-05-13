@@ -34,12 +34,9 @@ public class SilverCoinDAOImpl implements SilverCoinsDAO {
 
 	@Override
 	public SilverCoin create(SilverCoin silverCoin) {
-		EntityManager em = emf.createEntityManager();
-
-		em.getTransaction().begin();
+	    em = emf.createEntityManager();
 		em.persist(silverCoin);
-		em.flush();
-		em.getTransaction().commit();
+		
 		return silverCoin;
 	}
 
