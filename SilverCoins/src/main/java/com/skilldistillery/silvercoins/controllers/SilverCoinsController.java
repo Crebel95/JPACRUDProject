@@ -24,7 +24,7 @@ public class SilverCoinsController {
 	}
 	
 	@GetMapping("getSilverCoins.do")
-	public String getFilm(int id, Model model) {
+	public String getCoin(int id, Model model) {
 		SilverCoin sc = coinDao.findById(id);
 		model.addAttribute("silverCoin", sc);
 		return "show";

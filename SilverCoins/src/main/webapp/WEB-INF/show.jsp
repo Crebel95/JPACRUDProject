@@ -10,12 +10,12 @@
 
 <div class="container">
 	<c:choose>
-		<c:when test="${not empty sc}">
+		<c:when test="${not empty silverCoin}">
 			<h1>Silver Coin Details</h1>
 			<div>
-				<h4>${sc.type}(${sc.date})</h4>
-				<h5>${sc.mint } mint</h5>
-				<h5>Value ${sc.value}</h5>
+				<h4>${silverCoin.type}(${silverCoin.date})</h4>
+				<h5>${silverCoin.mint } mint</h5>
+				<h5>Value ${silverCoin.value}</h5>
 			</div>
 		</c:when>
 		
