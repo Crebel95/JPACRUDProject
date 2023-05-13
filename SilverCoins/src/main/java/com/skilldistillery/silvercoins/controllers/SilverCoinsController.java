@@ -23,11 +23,11 @@ public class SilverCoinsController {
 		return "home";
 	}
 	
-	@GetMapping("getSilverCoins.do")
+	@GetMapping("coinById.do")
 	public String getCoin(int id, Model model) {
 		SilverCoin sc = coinDao.findById(id);
 		model.addAttribute("silverCoin", sc);
-		return "show";
+		return "coinById";
 	}
 	
 	@RequestMapping(path = "deleteCoin.do", method = RequestMethod.GET)
