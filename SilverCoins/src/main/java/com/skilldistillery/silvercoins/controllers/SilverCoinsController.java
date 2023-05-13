@@ -42,10 +42,10 @@ public class SilverCoinsController {
 		
 	}
 	
-	@RequestMapping(path = "addCoin.do", method = RequestMethod.GET)
+	@RequestMapping(path = "addNewCoin.do", method = RequestMethod.GET)
 	public String addCoin( SilverCoin silverCoin, Model model) {
 	model.addAttribute("silverCoin",coinDao.create(silverCoin));
-	return "displayNewCoin";
+	return "addNewCoin";
 		
 	}
 

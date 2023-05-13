@@ -9,6 +9,8 @@
 <body>
 
 <div class="container">
+
+Test
 <c:choose>
 		<c:when test="${! empty silverCoin}">
 			
@@ -18,7 +20,7 @@
 					<li><div class="grow">Coin ID: ${silverCoin.id}</div></li>
 					<li><div class="grow">Type: ${silverCoin.type}</div></li>
 					<li><div class="grow">Mint: ${silverCoin.mint}</div></li>
-					<li><div class="grow">Year: ${silverCoin.year}</div></li>
+					<li><div class="grow">Year: ${silverCoin.date}</div></li>
 					<li><div class="grow">Value: ${silverCoin.value}</div></li>
 					<li><div class="grow">Silver content (grams): ${silverCoin.silverContent}</div></li>
 					<li><div class="grow">Weight (grams): ${silverCoin.weight}</div></li>
