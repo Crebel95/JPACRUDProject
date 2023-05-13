@@ -1,6 +1,7 @@
 package com.skilldistillery.silvercoins.entities;
 
 import java.time.Year;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,6 +26,7 @@ public class SilverCoin {
 	
 	@Column(name="date")
 	private int date;
+
 	
 	private Double value;
 	
@@ -37,6 +39,7 @@ public class SilverCoin {
 	public SilverCoin() {
 		super();
 	}
+
 
 	public SilverCoin(int id, String type, String mint, int date, Double value, Double silverContent, Double weight) {
 		super();
@@ -73,6 +76,7 @@ public class SilverCoin {
 		this.mint = mint;
 	}
 
+
 	@Transient
 	public Year getDate() {
 		return Year.of(date);
@@ -106,11 +110,11 @@ public class SilverCoin {
 		this.weight = weight;
 	}
 
-	@Override
-	public String toString() {
-		return "SilverCoin [id=" + id + ", type=" + type + ", mint=" + mint + ", date=" + date + ", value=" + value
-				+ ", silverContent=" + silverContent + ", weight=" + weight + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "SilverCoin [id=" + id + ", type=" + type + ", mint=" + mint + ", date=" + date + ", value=" + value
+//				+ ", silverContent=" + silverContent + ", weight=" + weight + "]";
+//	}
 
 
 
