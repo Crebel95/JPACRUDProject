@@ -48,5 +48,17 @@ public class SilverCoinsController {
 	return "addNewCoin";
 		
 	}
+	
+	@RequestMapping(path="updateCoin.do", method = RequestMethod.GET)
+	private String updateCoin(int id, SilverCoin silverCoin, Model model) {
+		model.addAttribute("silverCoin", coinDao.findById(id));
+		return "updateCoin";
+	}
 
+	@RequestMapping(path="updateResult.do", method = RequestMethod.GET)
+	private String updatedCoin(int id, SilverCoin silverCoin, Model model) {
+		coinDao.update(id, silverCoin);
+		model.addAttribute("silverCoin", silverCoin);
+		return "updateResults";
+	}
 }

@@ -51,7 +51,8 @@ public class SilverCoinDAOImpl implements SilverCoinsDAO {
 		
 		return silverCoin;
 	}
-
+	
+	
 	@Override
 	public boolean deleteById(int id) {
 		try {
@@ -64,5 +65,6 @@ public class SilverCoinDAOImpl implements SilverCoinsDAO {
 		}
 
 	}
+	
 
 }
