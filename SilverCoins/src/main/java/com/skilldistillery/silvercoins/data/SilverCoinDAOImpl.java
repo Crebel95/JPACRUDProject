@@ -17,7 +17,7 @@ import com.skilldistillery.silvercoins.entities.SilverCoin;
 public class SilverCoinDAOImpl implements SilverCoinsDAO {
 
 	@PersistenceContext
-	EntityManagerFactory emf = Persistence.createEntityManagerFactory("SilverCoins");
+
 	private EntityManager em;
 
 	@Override
@@ -34,7 +34,7 @@ public class SilverCoinDAOImpl implements SilverCoinsDAO {
 
 	@Override
 	public SilverCoin create(SilverCoin silverCoin) {
-	    em = emf.createEntityManager();
+	 
 		em.persist(silverCoin);
 		
 		return silverCoin;

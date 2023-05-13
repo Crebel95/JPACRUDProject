@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 
 @Entity
@@ -22,7 +23,8 @@ public class SilverCoin {
 
 	private String mint;
 	
-	private Year date;
+	@Column(name="date")
+	private int date;
 	
 	private Double value;
 	
@@ -36,7 +38,7 @@ public class SilverCoin {
 		super();
 	}
 
-	public SilverCoin(int id, String type, String mint, Year date, Double value, Double silverContent, Double weight) {
+	public SilverCoin(int id, String type, String mint, int date, Double value, Double silverContent, Double weight) {
 		super();
 		this.id = id;
 		this.type = type;
@@ -71,12 +73,13 @@ public class SilverCoin {
 		this.mint = mint;
 	}
 
+	@Transient
 	public Year getDate() {
-		return date;
+		return Year.of(date);
 	}
 
 	public void setDate(Year date) {
-		this.date = date;
+		this.date = date.getValue();
 	}
 
 	public Double getValue() {
