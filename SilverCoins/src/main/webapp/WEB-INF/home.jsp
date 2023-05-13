@@ -11,7 +11,16 @@
 
 <h1>Home Page</h1>
 
-${silverCoinList }
+	<div class="container">
 
+		${silverCoinList }
+
+		<div class="items">
+				<a href="coinById.html"><button class="button one">Find coin by ID</button> </a>
+				 <br /> 
+				 <a href="addNewCoin.html"><button class="button two">Add a new coin</button></a>
+				 <br /> 
+			</div>
+</div>
 </body>
 </html>

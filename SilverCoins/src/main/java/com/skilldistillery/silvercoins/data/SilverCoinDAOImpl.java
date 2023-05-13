@@ -3,6 +3,8 @@ package com.skilldistillery.silvercoins.data;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
@@ -15,6 +17,7 @@ import com.skilldistillery.silvercoins.entities.SilverCoin;
 public class SilverCoinDAOImpl implements SilverCoinsDAO {
 
 	@PersistenceContext
+	EntityManagerFactory emf = Persistence.createEntityManagerFactory("SilverCoins");
 	private EntityManager em;
 
 	@Override
@@ -31,8 +34,13 @@ public class SilverCoinDAOImpl implements SilverCoinsDAO {
 
 	@Override
 	public SilverCoin create(SilverCoin silverCoin) {
-		// TODO Auto-generated method stub
-		return null;
+		EntityManager em = emf.createEntityManager();
+
+		em.getTransaction().begin();
+		em.persist(silverCoin);
+		em.flush();
+		em.getTransaction().commit();
+		return silverCoin;
 	}
 
 	@Override
