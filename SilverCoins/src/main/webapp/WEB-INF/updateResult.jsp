@@ -10,12 +10,12 @@
 
 <a href="home.do">Home Page</a>
 
-<h1> ${result.type} </h1>
-<h1> ${result.mint} </h1>
-<h1> ${result.date} </h1>
-<h1> ${result.value} </h1>
-<h1> ${result.silverContent} </h1>
-<h1> ${result.weight} </h1>
+<h1> ${silverCoin.type} </h1>
+<h1> ${silverCoin.mint} </h1>
+<h1> ${silverCoin.date} </h1>
+<h1> ${silverCoin.value} </h1>
+<h1> ${silverCoin.silverContent} </h1>
+<h1> ${silverCoin.weight} </h1>
 
 </body>
 </html>

@@ -13,52 +13,52 @@ import com.skilldistillery.silvercoins.entities.SilverCoin;
 
 @Controller
 public class SilverCoinsController {
-	
+
 	@Autowired
 	private SilverCoinsDAO coinDao;
-	
-	@RequestMapping(path = {"/","home.do"})
+
+	@RequestMapping(path = { "/", "home.do" })
 	public String home(Model model) {
-		model.addAttribute("silverCoinList",coinDao.findAll());
+		model.addAttribute("silverCoinList", coinDao.findAll());
 		return "home";
 	}
-	
+
 	@GetMapping("coinById.do")
 	public String getCoin(int id, Model model) {
 		SilverCoin sc = coinDao.findById(id);
 		model.addAttribute("silverCoin", sc);
 		return "coinById";
 	}
-	
+
 	@RequestMapping(path = "deleteCoin.do", method = RequestMethod.GET)
 	public String deleteCoin(@RequestParam("id") int id, Model model) {
-		if(coinDao.deleteById(id)) {
+		if (coinDao.deleteById(id)) {
 			model.addAttribute("result", "Delete successful");
-		}
-		else {
+			return "deleteCoin";
+		} else {
 			model.addAttribute("result", "No coin associated with this ID");
 		}
 		return "result";
-		
+
 	}
-	
+
 	@RequestMapping(path = "addNewCoin.do", method = RequestMethod.GET)
-	public String addCoin( SilverCoin silverCoin, Model model) {
-	model.addAttribute("silverCoin",coinDao.create(silverCoin));
-	return "addNewCoin";
-		
+	public String addCoin(SilverCoin silverCoin, Model model) {
+		model.addAttribute("silverCoin", coinDao.create(silverCoin));
+		return "addNewCoin";
+
 	}
-	
-	@RequestMapping(path="updateCoin.do", method = RequestMethod.GET)
+
+	@RequestMapping(path = "updateCoin.do", method = RequestMethod.GET)
 	private String updateCoin(int id, SilverCoin silverCoin, Model model) {
 		model.addAttribute("silverCoin", coinDao.findById(id));
 		return "updateCoin";
 	}
 
-	@RequestMapping(path="updateResult.do", method = RequestMethod.GET)
+	@RequestMapping(path = "updateResult.do", method = RequestMethod.GET)
 	private String updatedCoin(int id, SilverCoin silverCoin, Model model) {
 		coinDao.update(id, silverCoin);
 		model.addAttribute("silverCoin", silverCoin);
-		return "updateResults";
+		return "updateResult";
 	}
 }

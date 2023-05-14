@@ -9,18 +9,11 @@
 <body>
 <div class="container">
 
-<c:choose>
-		<c:when test="${! empty silverCoin}">
-			<p> Delete unsuccessful </p>
+			
  <a href="home.do" class="btn btn-secondary" role="button">Back to Home</a>
-		</c:when>
 		
-		<c:otherwise>
 			<p>Delete successful</p>
- <a href="home.do" class="btn btn-secondary" role="button">Back to Home</a>
-		</c:otherwise>
-	</c:choose>
-</div>
+	
 
 </body>
 </html>

@@ -13,8 +13,6 @@
 
 	<div class="container">
 
-		${silverCoinList }
-
 		<div class="items">
 				<a href="coinById.html"><button class="button one">Find coin by ID</button> </a>
 				 <br /> 
@@ -23,7 +21,20 @@
 				 <a href="deleteCoin.html"><button class="button three">Delete a coin</button></a>
 				 <br /> 
 				 
+			
+				
+				
+				<c:forEach var="silverCoin" items="${silverCoinList}">
+					<tr>
+						<td>${silverCoin.id }</td>
+						<td><div class="grow"><a href="coinById.do?id=${silverCoin.id}"> ${silverCoin.type} </a></div></td>
+					</tr>
+				</c:forEach>
+			
 			</div>
+					
+					
+				
 </div>
 </body>
 </html>
