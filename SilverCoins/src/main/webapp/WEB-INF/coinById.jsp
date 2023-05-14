@@ -5,8 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Coin by Id</title>
+<jsp:include page="bootstrapHead.jsp" />
 </head>
 <body>
+<jsp:include page="navbar.jsp"/>
 
 	<div class="container">
 
@@ -30,8 +32,8 @@
 				  <input type="submit" value="Update info" />
 			</form>
 			<br>
-		<a href="home.do" class="btn btn-secondary" role="button">Home</a>
+		
 	</div>
-
+<jsp:include page="bootstrapFoot.jsp" />
 </body>
 </html>

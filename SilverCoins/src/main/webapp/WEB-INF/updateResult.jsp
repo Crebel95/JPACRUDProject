@@ -5,10 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Result</title>
+<jsp:include page="bootstrapHead.jsp" />
 </head>
 <body>
+<jsp:include page="navbar.jsp"/>
 
-<a href="home.do">Home Page</a>
 
 <h1> ${silverCoin.type} </h1>
 <h1> ${silverCoin.mint} </h1>
@@ -17,5 +18,6 @@
 <h1> ${silverCoin.silverContent} </h1>
 <h1> ${silverCoin.weight} </h1>
 
+<jsp:include page="bootstrapFoot.jsp" />
 </body>
 </html>

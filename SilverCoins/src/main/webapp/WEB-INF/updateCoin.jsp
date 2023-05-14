@@ -5,8 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Update Coin</title>
+<jsp:include page="bootstrapHead.jsp" />
 </head>
 <body>
+<jsp:include page="navbar.jsp"/>
 
 <c:choose> 
 	<c:when test="${! empty silverCoin}"> 
@@ -36,6 +38,6 @@
 			
 		</c:otherwise> 
 	</c:choose> 
-
+<jsp:include page="bootstrapFoot.jsp" />
 </body>
 </html>

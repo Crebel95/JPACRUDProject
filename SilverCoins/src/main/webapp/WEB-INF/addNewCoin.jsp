@@ -5,8 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Coin Added</title>
+<jsp:include page="bootstrapHead.jsp" />
 </head>
 <body>
+<jsp:include page="navbar.jsp"/>
 
 <div class="container">
 
@@ -34,7 +36,6 @@
 		</c:otherwise>
 	</c:choose>
 </div>
- <a href="home.do" class="btn btn-secondary" role="button">Back to Home</a>
-
+<jsp:include page="bootstrapFoot.jsp" />
 </body>
 </html>

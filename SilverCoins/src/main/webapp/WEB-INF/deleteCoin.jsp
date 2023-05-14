@@ -5,15 +5,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Delete Successful</title>
+<jsp:include page="bootstrapHead.jsp" />
 </head>
 <body>
+<jsp:include page="navbar.jsp"/>
 <div class="container">
 
 			
- <a href="home.do" class="btn btn-secondary" role="button">Back to Home</a>
 		
-			<p>Delete successful</p>
+			<h1>Delete successful</h1>
 	
-
+<jsp:include page="bootstrapFoot.jsp" />
 </body>
 </html>
