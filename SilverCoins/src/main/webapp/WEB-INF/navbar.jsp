@@ -17,6 +17,9 @@
         <li class="nav-item">
           <a class="nav-link active" href="deleteCoin.html">Delete Coin</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="https://www.reddit.com/r/Wallstreetsilver/">Learn More</a>
+        </li>
       </ul>
     </div>
   </div>

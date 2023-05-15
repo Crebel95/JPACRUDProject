@@ -26,6 +26,7 @@ public class SilverCoinsController {
 	@GetMapping("coinById.do")
 	public String getCoin(int id, Model model) {
 		SilverCoin sc = coinDao.findById(id);
+		
 		model.addAttribute("silverCoin", sc);
 		return "coinById";
 	}

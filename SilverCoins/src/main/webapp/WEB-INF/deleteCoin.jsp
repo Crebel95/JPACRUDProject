@@ -8,13 +8,14 @@
 <jsp:include page="bootstrapHead.jsp" />
 </head>
 <body>
-<jsp:include page="navbar.jsp"/>
-<div class="container">
+	<jsp:include page="navbar.jsp" />
+	<div class="container">
 
-			
-		
-			<h1>Delete successful</h1>
-	
-<jsp:include page="bootstrapFoot.jsp" />
+
+
+		<h1>Delete successful</h1>
+	</div>
+
+	<jsp:include page="bootstrapFoot.jsp" />
 </body>
 </html>
