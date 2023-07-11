@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Update Coin</title>
 <jsp:include page="bootstrapHead.jsp" />
+<link rel="stylesheet" href="index.css" type="text/css">
 </head>
 <body>
 <jsp:include page="navbar.jsp"/>
@@ -27,6 +28,8 @@
 			   <input type="number" name="silverContent" value="${silverCoin.silverContent}" required/>
 		    <label id="six">Weight (grams): </label> 
 			   <input type="number" name="weight" value="${silverCoin.weight}" required/>
+		    <label id="seven">Picture (Url): </label> 
+			   <input type="text" name="picture" value="${silverCoin.pictureUrl}" required/>
 		</fieldset>
 	
 		

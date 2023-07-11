@@ -13,6 +13,11 @@
 	<div class="head">
 		<jsp:include page="navbar.jsp" />
 	</div>
+	<div id="bannerContainer"></div>
+
+<div id="priceTracker">
+<iframe src="https://goldbroker.com/widget/live-price/XAG?currency=USD" width="100%" height="130" style="border: 0; overflow: hidden;"></iframe>
+</div>
 	<div class="video">
 		<iframe width="560" height="315"
 			src="https://www.youtube.com/embed/urEYrqiiXVE"
@@ -26,7 +31,7 @@
 			<tr>
 				
 				<td><div class="obj">
-						<a href="coinById.do?id=${silverCoin.id}"> ${silverCoin.id } ${silverCoin.type}
+					<img id="coinPic" alt="Coin" src="${silverCoin.pictureUrl}">	<a href="coinById.do?id=${silverCoin.id}"> ${silverCoin.type}
 						</a>
 					</div></td>
 			</tr>

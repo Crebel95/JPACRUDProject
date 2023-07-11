@@ -1,15 +1,11 @@
 package com.skilldistillery.silvercoins.entities;
 
-import java.time.Year;
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 
 @Entity
@@ -35,6 +31,9 @@ public class SilverCoin {
 
 	@Column(name="total_weight_grams")
 	private Double weight;
+	
+	@Column(name="picture_url")
+	private String pictureUrl;
 	
 	public SilverCoin() {
 		super();
@@ -123,6 +122,16 @@ public class SilverCoin {
 
 	public void setDate(int date) {
 		this.date = date;
+	}
+
+
+	public String getPictureUrl() {
+		return pictureUrl;
+	}
+
+
+	public void setPictureUrl(String pictureUrl) {
+		this.pictureUrl = pictureUrl;
 	}
 
 

@@ -11,25 +11,26 @@
 	<h1>Add new coin</h1>   
 	<form class="container" action="addNewCoin.do" method="GET">
 		<fieldset class="items add">
-			<label id="one"> Type: </label> 
-			<input type="text" name="type" required /> 
+			<label id="one"></label> 
+			<input type="text" name="type" placeholder="Coin type (Nickel, Dime, Quarter)"required /> 
 			<br> 
-			<label id="two"> Mint: </label> 
-			<input type="text" name="mint" /> 
+			<label id="two"></label> 
+			<input type="text" name="mint" placeholder="Mint" /> 
 			<br> 
-			<label id="three">Year: </label> 
-			<input type="number" name="date" required /> 
+			<label id="three"></label> 
+			<input type="number" name="date" placeholder="Year minted" required /> 
 			<br> 
-			<label id="four">Value: </label> 
-			<input type="number" name="value" required /> 
+			<label id="four"></label> 
+			<input type="number" name="value" placeholder="Aprroximate value" required /> 
 			<br> 
-			<label id="five">Silver content (grams): </label> 
-			<input type="number" name="silverContent" required /> 
+			<label id="five"></label> 
+			<input type="number" name="silverContent" placeholder="silver content (grams)" required /> 
 			<br> 
-			<label id="six">Weight (grams): </label> 
-			<input type="number" name="weight" required /> 
+			<label id="six"></label> 
+			<input type="number" name="weight" placeholder="Total weight (grams)" required /> 
 			<br>
-			<input type="submit" value="addNewCoin" />
+			<br>
+			<input type="submit" value="Submit Coin" />
 		</fieldset>
 	</form>
 	

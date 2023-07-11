@@ -6,34 +6,38 @@
 <meta charset="UTF-8">
 <title>Coin by Id</title>
 <jsp:include page="bootstrapHead.jsp" />
+<link rel="stylesheet" href="index.css" type="text/css">
 </head>
 <body>
-<jsp:include page="navbar.jsp"/>
+	<jsp:include page="navbar.jsp" />
 
 	<div class="container">
 
+		<div id="viewCoin">
+			<img id="coinPicView" alt="Coin" src="${silverCoin.pictureUrl}">
+			<ul>
+				<li>Coin ID: ${silverCoin.id}</li>
+				<li>Type: ${silverCoin.type}</li>
+				<li>Mint: ${silverCoin.mint}</li>
+				<li>Year: ${silverCoin.date}</li>
+				<li>Value: ${silverCoin.value}</li>
+				<li>Silver content (grams):
+					${silverCoin.silverContent}</li>
+				<li>Weight (grams): ${silverCoin.weight}</li>
+			</ul>
+		</div>
 
-		<ul>
-			<li><div class="grow">Coin ID: ${silverCoin.id}</div></li>
-			<li><div class="grow">Type: ${silverCoin.type}</div></li>
-			<li><div class="grow">Mint: ${silverCoin.mint}</div></li>
-			<li><div class="grow">Year: ${silverCoin.date}</div></li>
-			<li><div class="grow">Value: ${silverCoin.value}</div></li>
-			<li><div class="grow">Silver content (grams):
-					${silverCoin.silverContent}</div></li>
-			<li><div class="grow">Weight (grams): ${silverCoin.weight}</div></li>
-		</ul>
 
-
-	</div>
-	<div>
-	<form action="updateCoin.do" method="GET">		
-				  <input type="hidden" value="${silverCoin.id}" name="id" />
-				  <input type="submit" value="Update info" />
+		<div>
+			<form action="updateCoin.do" method="GET">
+				<input type="hidden" value="${silverCoin.id}" name="id" /> <input
+					type="submit" value="Update info" />
 			</form>
 			<br>
-		
+
+		</div>
+
 	</div>
-<jsp:include page="bootstrapFoot.jsp" />
+	<jsp:include page="bootstrapFoot.jsp" />
 </body>
 </html>

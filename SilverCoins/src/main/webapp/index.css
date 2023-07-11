@@ -54,3 +54,27 @@ overflow:scroll;
 height:350px;
 width:550px;
 }
+
+#coinPic {
+	height: 100px;
+	width: 100px;
+}
+
+#coinPicView {
+	height: 300px;
+	width: 300px;
+}
+
+#viewCoin {
+	margin-top: 250px;
+}
+
+#priceTracker {
+	position: relative;
+	float: center;
+	margin-top: 20px;
+	
+}
+	
+
+

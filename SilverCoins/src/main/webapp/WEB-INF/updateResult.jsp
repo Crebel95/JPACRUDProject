@@ -6,11 +6,12 @@
 <meta charset="UTF-8">
 <title>Result</title>
 <jsp:include page="bootstrapHead.jsp" />
+<link rel="stylesheet" href="index.css" type="text/css">
 </head>
 <body>
 <jsp:include page="navbar.jsp"/>
 
-
+<img id="coinPicView" alt="Coin" src="${silverCoin.pictureUrl}">
 <h1> ${silverCoin.type} </h1>
 <h1> ${silverCoin.mint} </h1>
 <h1> ${silverCoin.date} </h1>

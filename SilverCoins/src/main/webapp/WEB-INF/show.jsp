@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Silver Coin Details</title>
+<link rel="stylesheet" href="index.css" type="text/css">
 </head>
 <body>
 
@@ -12,6 +13,7 @@
 	<c:choose>
 		<c:when test="${not empty silverCoin}">
 			<h1>Silver Coin Details</h1>
+			<img id="coinPicView" alt="Coin" src="${silverCoin.pictureUrl}">
 			<div>
 				<h4>${silverCoin.type}(${silverCoin.date})</h4>
 				<h5>${silverCoin.mint } mint</h5>
